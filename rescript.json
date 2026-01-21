@@ -1,17 +1,16 @@
 {
-  "name": "@exercism/rescript-hello-world",
+  "name": "@exercism/rescript",
   "sources": [
     { "dir": "tmp/src", "subdirs": true },
     { "dir": "tmp/tests", "subdirs": true, "type": "dev" }
   ],
   "package-specs": [
     {
-      "module": "es6-global",
+      "module": "esmodule",
       "in-source": true
     }
   ],
-  "suffix": ".mjs",
-  "bs-dev-dependencies": [
-    "rescript-test"
-  ]
+  "suffix": ".res.js",
+  "dependencies": ["@rescript/core"],
+  "compiler-flags": ["-open RescriptCore"]
 }
