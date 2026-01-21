@@ -1,10 +1,9 @@
-let abbreviate = (input: string) : string => {
-  let firstLetter = (word: string) : string =>
-    word -> Js.String2.charAt(0) -> Js.String2.toUpperCase
+let abbreviate = (input: string): string => {
+  let firstLetter = (word: string): string => word->String.charAt(0)->String.toUpperCase
 
   input
-    -> Js.String2.splitByRe(%re("/[\\s-]/"))
-    -> Js.Array2.map(Belt.Option.getExn)
-    -> Js.Array2.map(firstLetter)
-    -> Js.Array2.joinWith("")
+  ->String.splitByRegExp(/[\\s-]/)
+  ->Array.map(o => Option.getExn(o))
+  ->Array.map(firstLetter)
+  ->Array.join("")
 }

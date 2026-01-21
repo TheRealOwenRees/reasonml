@@ -1,12 +1,15 @@
-open Js.Array2
-
 let to_digits = (number: int): array<int> => {
-  Belt.Int.toString(number) -> Js.String2.split("") -> map(Belt.Int.fromString) -> map(Belt.Option.getExn)
+  Int.toString(number)
+  ->String.split("")
+  ->Array.map(s => Int.fromString(s, ~radix=10))
+  ->Array.map(o => Option.getExn(o))
 }
 
 let validate = (number: int): bool => {
   let digits = to_digits(number)
-  let len = length(digits)
-  let total = digits -> reduce((acc, x) => acc + Js.Math.pow_int(~base=x, ~exp=len), 0)
-  total == number
+  let len = Array.length(digits)
+  let total = Array.reduce(digits, 0.0, (acc, x) =>
+    acc +. Math.pow(Float.fromInt(x), ~exp=Float.fromInt(len))
+  )
+  total == Float.fromInt(number)
 }

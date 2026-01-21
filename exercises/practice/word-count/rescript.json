@@ -12,5 +12,6 @@
   ],
   "suffix": ".res.js",
   "dependencies": ["@rescript/core"],
+  "dev-dependencies": ["rescript-test"],
   "compiler-flags": ["-open RescriptCore"]
 }

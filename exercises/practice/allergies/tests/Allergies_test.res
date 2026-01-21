@@ -1,5 +1,5 @@
-open Test;
-open Allergies;
+open Test
+open Allergies
 
 let boolEqual = (~message=?, a: bool, b: bool) =>
   assertion(~message?, ~operator="boolEqual", (a, b) => a == b, a, b)
@@ -20,9 +20,15 @@ test("has right allergies -> strawberries", () => boolEqual(isAllergicTo("strawb
 test("toList -> no allergies at all", () => arrayEqual(toList(0), []))
 test("toList -> allergies to just peanuts", () => arrayEqual(toList(2), ["peanuts"]))
 test("toList -> allergies to everything", () => {
-  arrayEqual(toList(255), ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"])
+  arrayEqual(
+    toList(255),
+    ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"],
+  )
 })
 test("toList -> ignore non allergen score parts", () => arrayEqual(toList(257), ["eggs"]))
 test("toList -> ignore all non allergen score parts", () => {
-  arrayEqual(toList(509), ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"])
+  arrayEqual(
+    toList(509),
+    ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"],
+  )
 })
