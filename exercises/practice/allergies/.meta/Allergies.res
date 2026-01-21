@@ -26,9 +26,7 @@ let toList = (code: int): array<string> => {
     }
   }
 
-  let result = toListRec([], mod(code, 256))
-  Array.reverse(result)
-  result
+  toListRec([], mod(code, 256))
 }
 
 let isAllergicTo = (item: string, code: int): bool => {

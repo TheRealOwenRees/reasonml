@@ -1,9 +1,18 @@
-let abbreviate = (input: string): string => {
-  let firstLetter = (word: string): string => word->String.charAt(0)->String.toUpperCase
-
-  input
-  ->String.splitByRegExp(/[\\s-]/)
-  ->Array.map(o => Option.getExn(o))
-  ->Array.map(firstLetter)
+let abbreviate = (phrase: string): string => {
+  phrase
+  ->String.split(" ")
+  ->Array.map(word => {
+    // Handle hyphenated words
+    let parts = String.split(word, "-")
+    Array.map(parts, part => {
+      switch String.trim(part) {
+      | "" => ""
+      | p => {
+          let first = String.charAt(p, 0)
+          String.toUpperCase(first)
+        }
+      }
+    })->Array.join("")
+  })
   ->Array.join("")
 }
