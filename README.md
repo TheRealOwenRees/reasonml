@@ -41,7 +41,7 @@ test("Acronym for lowercase words", () => {
 
 Use `PascalCase.res` for Reason implementation file names.
 A ReScript interface file (`.resi`) should be included with every exercise to help the user get started.
-Run `npm run res:format` on your code before pushing.
+Run `make format` on your code before pushing.
 
 Install the official [ReScript VS Code plugin](https://marketplace.visualstudio.com/items?itemName=chenglou92.rescript-vscode) for code highlighting and automatic formatting.
 
@@ -53,11 +53,7 @@ If you plan to make significant or breaking changes, please open an issue so we 
 
 Pull requests should be focused on a single exercise, issue, or conceptually cohesive change. Please refer to Exercism's [pull request guidelines](https://github.com/exercism/docs/blob/main/contributing/pull-request-guidelines.md).
 
-Please run `npm run res:format` to ensure a consistent coding style.
-
-```sh
-refmt --in-place Example.re
-```
+Please run `make format` to ensure a consistent coding style.
 
 ### Verifying Your Change
 
