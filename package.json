@@ -18,6 +18,7 @@
   "scripts": {
     "res:build": "rescript",
     "res:start": "rescript build -w",
+    "res:format": "rescript format",
     "test": "retest tmp/tests/*.js",
     "ci": "npm run res:build && npm test"
   }
