@@ -45,6 +45,11 @@ clean:
 	@echo "Cleaning tmp directory..."
 	@rm -rf $(OUTDIR)
 
+# Format all ReScript files in the project
+format:
+	@echo "Formatting ReScript files..."
+	@find . -name "node_modules" -prune -o -name "*.res" -print -o -name "*.resi" -print | xargs npx rescript format
+
 test:
 	$(MAKE) -s clean
 	$(MAKE) -s check-package-files
