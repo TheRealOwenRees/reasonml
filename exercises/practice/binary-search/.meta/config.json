@@ -1,23 +1,11 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [
-    "stevejb71"
-  ],
-  "contributors": [
-    "naartjie",
-    "ohana54",
-    "tejasbubane"
-  ],
+  "authors": ["stevejb71"],
+  "contributors": ["naartjie", "ohana54", "tejasbubane", "therealowenrees"],
   "files": {
-    "solution": [
-      "src/BinarySearch.re"
-    ],
-    "test": [
-      "__tests__/BinarySearch_test.re"
-    ],
-    "example": [
-      ".meta/src/Example.re"
-    ]
+    "solution": ["src/BinarySearch.res"],
+    "test": ["__tests__/BinarySearch_test.res"],
+    "example": [".meta/BinarySearch.res"]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
