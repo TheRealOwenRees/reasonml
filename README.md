@@ -4,8 +4,8 @@
 
 ## Setup
 
-First install npm (Node Package Manager) - you can do that from this site: https://www.npmjs.com/get-npm
-Follow the instructions under https://rescript.github.io/docs/en/installation to install ReScript.
+First install npm (Node Package Manager) - you can do that from this site: https://www.npmjs.com/get-npm.
+Follow the instructions at https://rescript-lang.org/docs/manual/installation to install ReScript.
 
 ## Contributing
 
@@ -53,7 +53,7 @@ If you plan to make significant or breaking changes, please open an issue so we 
 
 Pull requests should be focused on a single exercise, issue, or conceptually cohesive change. Please refer to Exercism's [pull request guidelines](https://github.com/exercism/docs/blob/main/contributing/pull-request-guidelines.md).
 
-Please use [refmt](https://rescript.github.io/docs/en/extra-goodies.html) to ensure a consistent coding style.
+Please run `npm run res:format` to ensure a consistent coding style.
 
 ```sh
 refmt --in-place Example.re
@@ -79,5 +79,5 @@ Note that:
 - Each exercise must stand on its own. Do not reference files outside the exercise directory. They will not be included when the user fetches the exercise.
 - Exercises may use any library subject to licensing restrictions, make sure dependencies are updated in the package.json file for the exercise.
 - Exercises must conform to the Exercism-wide standards described in [the documentation](https://github.com/exercism/docs/tree/main/language-tracks/exercises).
-- Each exercise should have a test suite, an example solution, and build configuration files for node and Bucklescript. The CI build expects ReScript files to be named ending in .re
+- Each exercise should have a test suite, an example solution, and build configuration files for node and ReScript. The CI build expects ReScript files to be named ending in .res
 - Be sure to add it to the appropriate place in the `config.json` file.
