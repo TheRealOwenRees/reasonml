@@ -19,19 +19,21 @@ Fixes and improvements to existing exercises are welcome. Please note that this 
 
 All Exercism exercises contain a test suite, which help to guide the user's implementation. You can read more about how we think about test suites in [the Exercism documentation](https://github.com/exercism/docs/blob/main/language-tracks/exercises/anatomy/test-suites.md).
 
-Tests should be written using [bs-jest](https://github.com/glennsl/bs-jest).
+Tests should be written using [rescript-test](https://bloodyowl.github.io/rescript-test/).
 
-```re
-open Jest;
-open Expect;
+```rescript
+open Test
+open Acronym
 
-describe("Leap", () => {
-  test("year not divisible by 4: common year", () =>
-    expect(Leap.is_leap_year(2015)) |> toBe(false)
-  );
-  test("year divisible by 4, not divisible by 100: leap year", () =>
-    expect(Leap.is_leap_year(1996)) |> toBe(true)
-  );
+let stringEqual = (~message=?, a: string, b: string) =>
+  assertion(~message?, ~operator="stringEqual", (a, b) => a == b, a, b)
+
+test("Acronym basic", () => {
+  stringEqual(abbreviate("Portable Network Graphics"), "PNG")
+})
+
+test("Acronym for lowercase words", () => {
+  stringEqual(abbreviate("Ruby on Rails"), "ROR")
 })
 ```
 
