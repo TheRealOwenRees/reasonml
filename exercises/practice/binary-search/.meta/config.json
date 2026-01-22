@@ -1,7 +1,7 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": ["stevejb71"],
-  "contributors": ["naartjie", "ohana54", "tejasbubane", "therealowenrees"],
+  "authors": ["therealowenrees"],
+  "contributors": [],
   "files": {
     "solution": ["src/BinarySearch.res"],
     "test": ["__tests__/BinarySearch_test.res"],
