@@ -39,9 +39,11 @@ test("Acronym for lowercase words", () => {
 
 ## Coding Style
 
-Use `PascalCase.re` for Reason implementation file names.
-A Reason interface file (`.rei`) should be included with every exercise to help the user get started.
-Use [refmt](https://github.com/rescript/reason-cli) on your code before pushing.
+Use `PascalCase.res` for Reason implementation file names.
+A ReScript interface file (`.resi`) should be included with every exercise to help the user get started.
+Run `npm run res:format` on your code before pushing.
+
+Install the official [ReScript VS Code plugin](https://marketplace.visualstudio.com/items?itemName=chenglou92.rescript-vscode) for code highlighting and automatic formatting.
 
 ## Opening an Issue
 
