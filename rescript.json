@@ -10,8 +10,5 @@
       "in-source": true
     }
   ],
-  "suffix": ".res.js",
-  "dependencies": ["@rescript/core"],
-  "dev-dependencies": ["rescript-test"],
-  "compiler-flags": ["-open RescriptCore"]
+  "suffix": ".res.js"
 }

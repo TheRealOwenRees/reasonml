@@ -11,8 +11,10 @@
     "type": "git",
     "url": "https://github.com/exercism/rescript"
   },
+  "dependencies": {
+    "rescript": "^12.1.0"
+  },
   "devDependencies": {
-    "@rescript/core": "^1.6.1",
     "rescript-test": "^8.0.0"
   },
   "scripts": {

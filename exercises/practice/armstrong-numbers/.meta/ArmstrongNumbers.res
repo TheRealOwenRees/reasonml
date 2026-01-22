@@ -2,7 +2,7 @@ let to_digits = (number: int): array<int> => {
   Int.toString(number)
   ->String.split("")
   ->Array.map(s => Int.fromString(s, ~radix=10))
-  ->Array.map(o => Option.getExn(o))
+  ->Array.map(o => Option.getOrThrow(o))
 }
 
 let validate = (number: int): bool => {
