@@ -10,5 +10,6 @@
       "in-source": true
     }
   ],
-  "suffix": ".res.js"
+  "suffix": ".res.js",
+  "dev-dependencies": ["rescript", "rescript-test"]
 }
